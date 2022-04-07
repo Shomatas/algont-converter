@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import InputCurrency from './components/inputCurrency/inputCurrency.jsx';
+import OutputCurrency from './components/outputCurrency/outputCurrency.jsx';
+import ButtonReverse from './components/buttonReverse/buttonReverse.jsx';
+import {useSelector} from "react-redux";
+import {Box} from '@mui/material';
 
-function App() {
+const App = () => {
+  let inp = useSelector( state => state.inputCur);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box sx={{
+        display: 'flex',
+        width: '100vw',
+        height: '100vh',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <InputCurrency />
+        <ButtonReverse />
+        <OutputCurrency />
+      </Box>
     </div>
   );
 }
