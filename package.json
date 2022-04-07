@@ -2,7 +2,7 @@
   "name": "converter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Shomatas.github.io/algont-converter",
+  "homepage": "http://Shomatas.github.io/algont-converter/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
